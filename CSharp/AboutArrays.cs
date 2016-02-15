@@ -60,6 +60,7 @@ namespace DotNetKoans.CSharp
             //This doesn't work: Assert.Equal(FILL_ME_IN, array[-1]);
         }
 
+
         [Koan(4)]
         public void SlicingArrays()
         {
