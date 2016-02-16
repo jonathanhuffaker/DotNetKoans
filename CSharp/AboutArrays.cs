@@ -29,7 +29,9 @@ namespace DotNetKoans.CSharp
             Assert.Equal(new int[] { 42 }, array);
 
             //Are arrays 0-based or 1-based?
-            Assert.Equal(42, array[0]);
+            Assert.Equal(42, array[((int)0)]);
+
+            //Assert.Equal(42, array[0]); this is my answer and it passed but above is answer J had in class
 
             //This is important because...
             Assert.True(array.IsFixedSize);
@@ -60,14 +62,13 @@ namespace DotNetKoans.CSharp
             //This doesn't work: Assert.Equal(FILL_ME_IN, array[-1]);
         }
 
-
         [Koan(4)]
         public void SlicingArrays()
         {
             var array = new[] { "peanut", "butter", "and", "jelly" };
 
-			Assert.Equal(new string[] { (string)FILL_ME_IN, (string)FILL_ME_IN }, array.Take(2).ToArray());
-			Assert.Equal(new string[] { (string)FILL_ME_IN, (string)FILL_ME_IN }, array.Skip(1).Take(2).ToArray());
+			Assert.Equal(new string[] { (string)"peanut", (string)"butter" }, array.Take(2).ToArray());
+			Assert.Equal(new string[] { (string)"butter", (string)"and" }, array.Skip(1).Take(2).ToArray());
         }
 
         [Koan(5)]
@@ -76,10 +77,10 @@ namespace DotNetKoans.CSharp
             var array = new[] { 1, 2 };
             Stack stack = new Stack(array);
             stack.Push("last");
-            Assert.Equal(FILL_ME_IN, stack.ToArray());
+            Assert.Equal(new object[] { "last", 2, 1 }, stack.ToArray());
             var poppedValue = stack.Pop();
-            Assert.Equal(FILL_ME_IN, poppedValue);
-            Assert.Equal(FILL_ME_IN, stack.ToArray());
+            Assert.Equal("last", poppedValue);
+            Assert.Equal(new object[] { 2, 1 }, stack.ToArray());
         }
 
         [Koan(6)]
@@ -93,16 +94,16 @@ namespace DotNetKoans.CSharp
             var list = new LinkedList<string>(array);
 
             list.AddFirst("Say");
-            Assert.Equal(FILL_ME_IN, list.ToArray());
+            Assert.Equal(new string[] { "Say", "Hello", "World"}, list.ToArray());
 
             list.RemoveLast();
-            Assert.Equal(FILL_ME_IN, list.ToArray());
+            Assert.Equal(new string[] {"Say", "Hello"}, list.ToArray());
 
             list.RemoveFirst();
-            Assert.Equal(FILL_ME_IN, list.ToArray());
+            Assert.Equal(new string[] { "Hello" }, list.ToArray());
 
             list.AddAfter(list.Find("Hello"), "World");
-            Assert.Equal(FILL_ME_IN, list.ToArray());
+            Assert.Equal(new string[] { "Hello", "World" }, list.ToArray());
         }
 
     }
