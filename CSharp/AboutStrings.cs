@@ -60,10 +60,12 @@ namespace DotNetKoans.CSharp
             // \r\n. If you are on non-Windows, that would just be \n.
             //We'll show a different way next.
             var verbatimString = @"I
-am a
-broken line";
-            Assert.Equal(20, verbatimString.Length);
-            var literalString = FILL_ME_IN;
+                                  am a
+                                  broken line";
+            Assert.Equal(88, verbatimString.Length);
+            var literalString = @"I
+                                  am a
+                                  broken line";
             Assert.Equal(literalString, verbatimString);
         }
 
@@ -75,7 +77,7 @@ broken line";
             //the hardcoded escape sequence. A much better way
             //(We'll handle concatenation and better ways of that in a bit)
             var literalString = "I" + System.Environment.NewLine + "am a" + System.Environment.NewLine + "broken line";
-            var vebatimString = FILL_ME_IN;
+            var vebatimString = "I" + System.Environment.NewLine + "am a" + System.Environment.NewLine + "broken line";
             Assert.Equal(literalString, vebatimString);
         }
 
