@@ -85,7 +85,7 @@ namespace DotNetKoans.CSharp
         public void PlusWillConcatenateTwoStrings()
         {
             var str = "Hello, " + "World";
-            Assert.Equal(FILL_ME_IN, str);
+            Assert.Equal("Hello, World", str);
         }
 
         [Koan(9)]
