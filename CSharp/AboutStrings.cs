@@ -94,8 +94,8 @@ namespace DotNetKoans.CSharp
             var strA = "Hello, ";
             var strB = "World";
             var fullString = strA + strB;
-            Assert.Equal(FILL_ME_IN, strA);
-            Assert.Equal(FILL_ME_IN, strB);
+            Assert.Equal("Hello, ", strA);
+            Assert.Equal("World", strB);
         }
 
         [Koan(10)]
@@ -104,8 +104,8 @@ namespace DotNetKoans.CSharp
             var strA = "Hello, ";
             var strB = "World";
             strA += strB;
-            Assert.Equal(FILL_ME_IN, strA);
-            Assert.Equal(FILL_ME_IN, strB);
+            Assert.Equal("Hello, World", strA);
+            Assert.Equal("World", strB);
         }
 
         [Koan(11)]
@@ -119,7 +119,7 @@ namespace DotNetKoans.CSharp
             var originalString = strA;
             var strB = "World";
             strA += strB;
-            Assert.Equal(FILL_ME_IN, originalString);
+            Assert.Equal("Hello, ", originalString);
 
             //What just happened? Well, the string concatenation actually
             //takes strA and strB and creates a *new* string in memory
@@ -136,14 +136,14 @@ namespace DotNetKoans.CSharp
 		{
 			var world = "World";
 			var str = String.Format("Hello, {0}", world);
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("Hello, World", str);
 		}
 
 		[Koan(13)]
 		public void AnyExpressionCanBeUsedInFormatString()
 		{
-			var str = String.Format("The square root of 9 is {0}", Math.Sqrt(9));
-			Assert.Equal(FILL_ME_IN, str);
+			var str = String.Format("The square root of 9 is 3", Math.Sqrt(9));
+			Assert.Equal("The square root of 9 is 3", str);
 		}
 
 		[Koan(14)]
@@ -151,7 +151,7 @@ namespace DotNetKoans.CSharp
 		{
 			//You can modify the value inserted into the result
 			var str = string.Format("{0,3:}", "x");
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("  x", str);
 		}
 
 		[Koan(15)]
