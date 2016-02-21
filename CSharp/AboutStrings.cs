@@ -157,22 +157,22 @@ namespace DotNetKoans.CSharp
 		[Koan(15)]
 		public void StringsCanBePaddedToTheRight()
 		{
-			var str = string.Format("{0,-3:}", "x");
-			Assert.Equal(FILL_ME_IN, str);
+			var str = string.Format("{0,-3:}", "x   ");
+			Assert.Equal("x   ", str);
 		}
 
 		[Koan(16)]
 		public void SeperatorsCanBeAdded()
 		{
 			var str = string.Format("{0:n}", 123456);
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("123,456.00", str);
 		}
 
 		[Koan(17)]
 		public void CurrencyDesignatorsCanBeAdded()
 		{
 			var str = string.Format("{0:n}", 123456);
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("123,456.00", str);
 		}
 
 		[Koan(18)]
