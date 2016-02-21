@@ -193,14 +193,14 @@ namespace DotNetKoans.CSharp
 		public void BuiltInDateFormaters()
 		{
 			var str = string.Format("{0:t}", DateTime.Parse("12/16/2011 2:35:02 PM"));
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("2:35 PM", str);
 		}
 
 		[Koan(21)]
 		public void CustomeDateFormaters()
 		{
 			var str = string.Format("{0:t m}", DateTime.Parse("12/16/2011 2:35:02 PM"));
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("P 35", str);
 		}
 		//These are just a few of the formatters available. Dig some and you may find what you need.
 
@@ -219,7 +219,7 @@ namespace DotNetKoans.CSharp
 			strBuilder.Append("lazy ");
 			strBuilder.Append("dog.");
             var str = strBuilder.ToString();
-            Assert.Equal(FILL_ME_IN, str);
+            Assert.Equal("The quick brown fox jumped over the lazy dog.", str);
 
             //String.Format and StringBuilder will be more efficent that concatenation. Prefer them.
         }
@@ -232,7 +232,7 @@ namespace DotNetKoans.CSharp
 			strBuilder.AppendFormat("{0} {1} {2}", "jumped", "over", "the");
 			strBuilder.AppendFormat("{0} {1}.", "lazy", "dog");
 			var str = strBuilder.ToString();
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("The quick brownjumped over thelazy dog.", str);
 		}
 		
         [Koan(23)]
