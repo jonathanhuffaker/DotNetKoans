@@ -179,14 +179,14 @@ namespace DotNetKoans.CSharp
 		public void NumberOfDisplayedDecimalsCanBeControled()
 		{
 			var str = string.Format("{0:.##}", 12.3456);
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("12.35", str);
 		}
 
 		[Koan(19)]
 		public void MinimumNumberOfDisplayedDecimalsCanBeControled()
 		{
 			var str = string.Format("{0:.00}", 12.3);
-			Assert.Equal(FILL_ME_IN, str);
+			Assert.Equal("12.30", str);
 		}
 
 		[Koan(20)]
