@@ -99,7 +99,7 @@ namespace DotNetKoans.CSharp
 
             int x = nullableInt ?? 42;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(42, x);
         }
 
         [Koan(9)]
@@ -120,10 +120,10 @@ namespace DotNetKoans.CSharp
             if (myType is AboutMethods)
                 isAboutMethods = true;
 
-            Assert.Equal(FILL_ME_IN, isKoan);
-            Assert.Equal(FILL_ME_IN, isAboutControlStatements);
-            Assert.Equal(FILL_ME_IN, isAboutMethods);
-
+            Assert.Equal(true, isKoan);
+            Assert.Equal(true, isAboutControlStatements);
+            Assert.Equal(false, isAboutMethods);
+/* dont understand why the last one ^ is false?*/
         }
 
         [Koan(10)]
