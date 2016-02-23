@@ -19,7 +19,7 @@ namespace DotNetKoans.CSharp
                 b = false;
             }
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
         }
 
         [Koan(2)]
@@ -31,7 +31,7 @@ namespace DotNetKoans.CSharp
             else
                 b = false;
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
 
         }
 
@@ -44,7 +44,7 @@ namespace DotNetKoans.CSharp
                 b = true;
             }
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
         }
 
         [Koan(4)]
@@ -54,7 +54,7 @@ namespace DotNetKoans.CSharp
             if (true)
                 b = true;
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
         }
 
         [Koan(5)]
@@ -68,16 +68,16 @@ namespace DotNetKoans.CSharp
             if (counter == 0)
                 b1 = true;
                 b2 = true;
-
-			Assert.Equal(FILL_ME_IN, b1);
-			Assert.Equal(FILL_ME_IN, b2);
+/*I dont understand why line 73 is true*/
+			Assert.Equal(false, b1);
+			Assert.Equal(true, b2);
         }
 
         [Koan(6)]
         public void TernaryOperators()
         {
-            Assert.Equal(FILL_ME_IN, (true ? 1 : 0));
-            Assert.Equal(FILL_ME_IN, (false ? 1 : 0));
+            Assert.Equal(1, (true ? 1 : 0));
+            Assert.Equal(0, (false ? 1 : 0));
         }
 
         //This is out of place for control statements, but necessary for Koan 8
@@ -88,7 +88,7 @@ namespace DotNetKoans.CSharp
             //i = null; //You can't do this
 
             int? nullableInt = null; //but you can do this
-			Assert.NotNull(FILL_ME_IN);
+			Assert.NotNull(i);
 			Assert.Null(FILL_ME_IN);
         }
 
