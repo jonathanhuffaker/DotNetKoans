@@ -89,7 +89,7 @@ namespace DotNetKoans.CSharp
 
             int? nullableInt = null; //but you can do this
 			Assert.NotNull(i);
-			Assert.Null(FILL_ME_IN);
+			Assert.Null(nullableInt);
         }
 
         [Koan(8)]
