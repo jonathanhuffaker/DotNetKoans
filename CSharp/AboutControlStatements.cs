@@ -136,7 +136,7 @@ namespace DotNetKoans.CSharp
                 result = result + i;
                 i += 1;
             }
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(7, result);
         }
 
         [Koan(11)]
@@ -150,7 +150,7 @@ namespace DotNetKoans.CSharp
                 result = result + i;
                 i += 1;    
             }
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(7, result);
         }
 
         [Koan(12)]
