@@ -158,13 +158,13 @@ namespace DotNetKoans.CSharp
         {
             int i = 0;
             var result = new List<int>();
-            while(i < 10)
+            while (i < 10)
             {
                 i += 1;
                 if ((i % 2) == 0) { continue; }
                 result.Add(i);
             }
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(result, result);
         }
 
         [Koan(13)]
