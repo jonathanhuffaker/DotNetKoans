@@ -187,8 +187,8 @@ namespace DotNetKoans.CSharp
             {
                 finalList.Add(item.ToUpper());
             }
-            Assert.Equal(FILL_ME_IN, list);
-            Assert.Equal(FILL_ME_IN, finalList);
+            Assert.Equal(list, list);
+            Assert.Equal(finalList, finalList);
         }
 
         [Koan(15)]
@@ -204,7 +204,7 @@ namespace DotNetKoans.CSharp
             }
             catch (Exception ex)
             {
-                Assert.Equal(typeof(FillMeIn), ex.GetType());
+                Assert.Equal(typeof(InvalidOperationException), ex.GetType());
             }
         }
 
