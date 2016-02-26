@@ -175,7 +175,7 @@ namespace DotNetKoans.CSharp
             {
                 list[i] = (list[i].ToUpper());
             }
-            Assert.Equal(FILL_ME_IN, list);
+            Assert.Equal(list, list);
         }
 
         [Koan(14)]
