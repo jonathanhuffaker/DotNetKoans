@@ -14,17 +14,17 @@ namespace DotNetKoans.CSharp
 			//The size of an array cannot be changed after you allocate it. To get around that
 			//you need a class from the System.Collections namespace such as ArrayList
 			ArrayList list = new ArrayList();
-			Assert.Equal(FILL_ME_IN, list.Count);
+			Assert.Equal(0, list.Count);
 
 			list.Add(42);
-			Assert.Equal(FILL_ME_IN, list.Count);
+			Assert.Equal(1, list.Count);
 		}
 		[Koan(2)]
 		public void ArrayListHoldsObjects()
 		{
 			ArrayList list = new ArrayList();
 			System.Reflection.MethodInfo method = list.GetType().GetMethod("Add");
-			Assert.Equal(typeof(FillMeIn), method.GetParameters()[0].ParameterType);
+			Assert.Equal(typeof(ArrayList), method.GetParameters()[0].ParameterType);
 		}
 		[Koan(3)]
 		public void MustCastWhenRetrieving()
