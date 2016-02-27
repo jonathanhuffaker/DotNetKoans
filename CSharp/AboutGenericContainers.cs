@@ -97,14 +97,14 @@ namespace DotNetKoans.CSharp
 			//Just as with Array, list will work with any type
 			List<Widget> list = new List<Widget>();
 			list.Add(new Widget());
-			Assert.Equal(FILL_ME_IN, list.Count);
+			Assert.Equal(1, list.Count);
 		}
 		[Koan(8)]
 		public void InitializingWithValues()
 		{
 			//Like array you can create a list with an initial set of values easily
 			var list = new List<int> { 1, 2, 3 };
-			Assert.Equal(FILL_ME_IN, list.Count);
+			Assert.Equal(3, list.Count);
 		}
 		[Koan(9)]
 		public void AddMultipleItems()
@@ -112,7 +112,7 @@ namespace DotNetKoans.CSharp
 			//You can add multiple items to a list at once
 			List<int> list = new List<int>();
 			list.AddRange(new[] { 1, 2, 3 });
-			Assert.Equal(FILL_ME_IN, list.Count);
+			Assert.Equal(3, list.Count);
 		}
 		[Koan(10)]
 		public void RandomAccess()
