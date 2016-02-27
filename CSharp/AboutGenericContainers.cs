@@ -132,14 +132,14 @@ namespace DotNetKoans.CSharp
 		public void ConvertingToFixedSize()
 		{
 			List<int> list = new List<int> { 1, 2, 3 };
-			Assert.Equal(FILL_ME_IN, list.ToArray());
+			Assert.Equal(new int[] { 1, 2, 3 }, list.ToArray());
 		}
 		[Koan(13)]
 		public void InsertingInTheMiddle()
 		{
 			List<int> list = new List<int> { 1, 2, 3 };
 			list.Insert(1, 6);
-			Assert.Equal(FILL_ME_IN, list.ToArray());
+			Assert.Equal(new int[] { 1, 6, 2, 3 }, list.ToArray());
 		}
 		[Koan(14)]
 		public void RemovingItems()
