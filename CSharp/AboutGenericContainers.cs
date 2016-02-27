@@ -119,14 +119,14 @@ namespace DotNetKoans.CSharp
 		{
 			//Just as with array, you can use the subscript notation to access any element in a list.
 			List<int> list = new List<int> { 5, 6, 7 };
-			Assert.Equal(FILL_ME_IN, list[2]);
+			Assert.Equal(7, list[2]);
 		}
 		[Koan(11)]
 		public void BeyondTheLimits()
 		{
 			List<int> list = new List<int> { 1, 2, 3 };
 			//You cannot attempt to get data that doesn't exist
-			Assert.Throws(typeof(FillMeIn), delegate() { int x = list[3]; });
+			Assert.Throws(typeof(ArgumentOutOfRangeException), delegate() { int x = list[3]; });
 		}
 		[Koan(12)]
 		public void ConvertingToFixedSize()
