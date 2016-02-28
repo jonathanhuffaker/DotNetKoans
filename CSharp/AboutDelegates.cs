@@ -33,38 +33,38 @@ namespace DotNetKoans.CSharp
 		{
 			//If you don't initialize a delegate it will be a null value, just as any other refrence type.
 			BinaryOp op;
-			Assert.Null(FILL_ME_IN);
+			Assert.Null(null);
 		}
 		[Koan(2)]
 		public void DelegatesCanBeInstantiated()
 		{
 			MyMath math = new MyMath();
 			BinaryOp op = new BinaryOp(math.Add);
-			Assert.Equal(FILL_ME_IN, op.Method.Name);
+			Assert.Equal("Add", op.Method.Name);
 		}
 		[Koan(3)]
 		public void DelegatesCanBeAssigned()
 		{
 			MyMath math = new MyMath();
 			BinaryOp op = math.Add;
-			Assert.Equal(FILL_ME_IN, op.Method.Name);
+			Assert.Equal("Add", op.Method.Name);
 		}
 		[Koan(4)]
 		public void DelegatesCanReferenceStaticMethods()
 		{
 			BinaryOp op = MyMath.Subtract;
-			Assert.Equal(FILL_ME_IN, op.Method.Name);
+			Assert.Equal("Subtract", op.Method.Name);
 		}
 		[Koan(5)]
 		public void MethodsCalledViaDelegate()
 		{
 			MyMath math = new MyMath();
 			BinaryOp op = math.Add;
-			Assert.Equal(FILL_ME_IN, op(3,3));
+			Assert.Equal(6, op(3,3));
 		}
 		private void PassMeTheDelegate(BinaryOp passed)
 		{
-            Assert.Equal(FILL_ME_IN, passed(3,3));
+            Assert.Equal(6, passed(3,3));
         }
 		[Koan(6)]
 		public void DelegatesCanBePassed()
@@ -89,7 +89,7 @@ namespace DotNetKoans.CSharp
 			Assert.Same(a, original);
 			a = MyMath.Subtract;
 			//a is now a different instance
-			Assert.Same(a, original);
+			Assert.NotSame(a, original);
 		}
 		delegate int Curry(int val);
 		public class FunctionalTricks
